@@ -1,9 +1,14 @@
 const images = document.querySelectorAll('.images img');
 let displayImage = 0;
 
-function updateImage() {
+function updateImage() 
+{
     images.forEach((img, i) => {
-        img.classList.toggle('visible', i === displayImage);
+        if (i === displayImage) {
+            img.classList.add('visible'); // Agregar clase visible
+        } else {
+            img.classList.remove('visible'); // Quitar clase visible
+        }
     });
 }
 

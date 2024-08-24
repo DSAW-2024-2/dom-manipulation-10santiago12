@@ -17,31 +17,21 @@ html, body
     height: 100%;
 }
 
-.images {
-    position: relative;
-    width: 100%; /* Asegúrate de que ocupe el 100% del ancho del contenedor */
-    height: auto; /* Ajusta la altura según el contenido */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-}
-
-
-.images img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.images img 
+{
+    width: 500px;
+    height: 350px;
     border-radius: 10px;
-    opacity: 0; /* Oculta inicialmente las imágenes */
-    transition: opacity 0.35s ease-in-out;
-    top: 0;
-    left: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Efecto de transición para las imágenes que no funcionó :((*/
 }
 
-.images img.visible {
-    opacity: 1; /* Muestra la imagen activa */
+.images img.visible 
+{
+    display: block;
+    opacity: 1;
 }
-
 
 
 .right button, .left button 
@@ -89,81 +79,101 @@ html, body
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-                                            /*------------------------------MEDIA QUERIES------------------------------*/
+                                                /*------------------------------MEDIA QUERIES------------------------------*/
 
 /* Mobile Portrait: 320px x 480px */
-@media (max-width: 320px) {
-    .container {
+@media (max-width: 320px) 
+{
+    .container 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 10px;
-        flex-direction: column; /* Asegura que la dirección sea vertical */
     }
 
-    .images {
+    .images 
+    {
         margin-bottom: 10px;
-        height: 175px; /* Ajusta la altura según sea necesario */
     }
 
-    .images img {
+    .images img 
+    {
         width: 250px;
         height: 175px;
     }
 
-    .buttons {
-        display: flex;
-        justify-content: center; /* Centra los botones horizontalmente */
-        width: 100%;
-        margin: 10px 0; /* Añade margen para separar los botones de la imagen */
-    }
-
-    .left, .right {
-        position: static; /* Asegura que los botones estén en el flujo normal del documento */
+    .left, .right 
+    {
+        position: static;
         width: 50px;
         height: 50px;
         margin: 5px;
+        display: inline-block;
     }
 
-    .left button, .right button {
+    .left button, .right button 
+    {
         width: 50px;
         height: 50px;
         font-size: 14px;
     }
+
+    .buttons 
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 /* Tablet Portrait: 768px x 1024px */
-@media (max-width: 1023px) and (min-width: 321px) {
-    .container {
+@media (max-width: 1023px) and (min-width: 321px) 
+{
+    .container 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 20px;
-        flex-direction: column; /* Asegura que la dirección sea vertical */
     }
 
-    .images {
+    .images 
+    {
         margin-bottom: 20px;
-        height: 300px; /* Ajusta la altura según sea necesario */
     }
 
-    .images img {
+    .images img 
+    {
         width: 400px;
         height: 300px;
     }
 
-    .buttons {
-        display: flex;
-        justify-content: center; /* Centra los botones horizontalmente */
-        width: 100%;
-        margin: 20px 0; /* Añade margen para separar los botones de la imagen */
-    }
-
-    .left, .right {
-        position: static; /* Asegura que los botones estén en el flujo normal del documento */
+    .left, .right 
+    {
+        position: static;
         width: 80px;
         height: 80px;
         margin: 10px;
+        display: inline-block;
     }
 
-    .left button, .right button {
+    .left button, .right button 
+    {
         width: 80px;
         height: 80px;
         font-size: 16px;
+    }
+
+    .buttons 
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 400px;
     }
 }
 
