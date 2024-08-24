@@ -1,0 +1,51 @@
+.container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image img
+{
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.left 
+{
+    position: absolute;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.right 
+{
+    position: absolute;
+    right: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.right button
+{
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+.left button
+{
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+
+
